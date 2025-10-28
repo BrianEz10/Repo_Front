@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="login-page">
+    <main class="login-container">
+    <h1>Super Food</h1>
+    <h2>Iniciar sesión</h2>
+    <form id="loginForm">
+        
+            <label>Email</label>
+            <input type="email" id="email" required placeholder="ejemplo@gmail.com"/>
+
+            <label>Contraseña</label>  
+            <input type="password" id="password" required placeholder="Ingrese su contraseña" />
+
+        <button type="submit" class="BtnIngresar">Ingresar</button>
+    </form>
+
+
+    
+
+    <p>¿No tienes cuenta?
+        <a href="/src/pages/auth/register/register.html">Registrate</a>
+    </p>
+
+    <div class="extra">
+        <p>Cuentas de prueba:</p>
+        <p>Admin: admin@food.com / admin123</p>
+        <p>Cliente: cliente@food.com / cliente123</p>
+    </div>
+    </main>
+
+</body>
+<script type="module" src="/src/pages/auth/login/login.ts"></script>
+</html>
