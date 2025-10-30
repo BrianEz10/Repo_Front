@@ -1,0 +1,1 @@
+console.log("✅ products.ts cargado correctamente — pendiente de desarrollar CRUD");

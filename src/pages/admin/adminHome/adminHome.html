@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel Admin - Super Food</title>
+  <link rel="stylesheet" href="../../../styles.css" />
+</head>
+<body id="admin-page">
+
+  <!--  Barra superior limpia -->
+  <header class="admin-navbar">
+    <h1 class="brand">
+  <img src="https://www.svgrepo.com/show/489886/hamburger.svg" alt="Super Food Logo" class="brand-icon">
+  Super Food — Administración
+</h1>
+    <div id="menu-btn" class="menu-btn">☰</div>
+  </header>
+
+  <main class="admin-container">
+    <section class="admin-panel">
+      <h3 class="admin-title">Bienvenido, <span id="adminName">Admin</span></h3>
+      <p class="admin-subtitle">Gestioná el contenido de la tienda desde aquí.</p>
+
+      <div class="admin-cards">
+        <!-- Categorías -->
+        <a class="admin-card" href="../categories/categories.html">
+          <div class="admin-card__icon">🗂</div>
+          <div class="admin-card__title">Categorías</div>
+          <div class="admin-card__desc">Crear, editar y borrar categorías</div>
+        </a>
+
+        <!-- Productos -->
+        <a class="admin-card" href="../products/products.html">
+          <div class="admin-card__icon">🍕</div>
+          <div class="admin-card__title">Productos</div>
+          <div class="admin-card__desc">Gestionar catálogo y precios</div>
+        </a>
+
+        <!-- Órdenes -->
+        <a class="admin-card" href="../orders/orders.html">
+          <div class="admin-card__icon">📦</div>
+          <div class="admin-card__title">Órdenes</div>
+          <div class="admin-card__desc">Ver y administrar pedidos</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2 id="sidebarUser">👤 Usuario</h2>
+      <button id="close-sidebar" class="close-btn">×</button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="../adminHome/adminHome.html"> Inicio</a>
+      <a href="../categories/categories.html"> Categorías</a>
+      <a href="../products/products.html"> Productos</a>
+      <a href="../orders/orders.html"> Órdenes</a>
+    </nav>
+
+    <button id="logoutSidebarBtn" class="logout-btn">Salir</button>
+  </aside>
+
+  <script type="module" src="./adminHome.ts"></script>
+</body>
+</html>

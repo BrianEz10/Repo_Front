@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Categorías - Super Food</title>
+  <link rel="stylesheet" href="../../../styles.css" />
+  <link rel="stylesheet" href="./categories.css" />
+</head>
+<body id="admin-page">
+  <!-- Navbar simple + botón menú -->
+  <header class="admin-navbar">
+    <h1 class="brand">
+  <img src="https://www.svgrepo.com/show/489886/hamburger.svg" alt="Super Food Logo" class="brand-icon">
+  Super Food — Categorías
+</h1>
+    <div id="menu-btn" class="menu-btn" aria-label="Abrir menú">☰</div>
+
+  </header>
+
+  <main class="admin-container categories-container">
+    <div class="header-actions">
+      <h2 class="panel-title">Categorías disponibles</h2>
+      <button id="btnAdd" class="btn-primary">+ Nueva Categoría</button>
+    </div>
+
+    <!-- Lista -->
+    <div id="categoriesList" class="cat-list"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal-bg" class="modal-bg" style="display:none;">
+    <div class="modal">
+      <h3 id="modal-title">Nueva Categoría</h3>
+
+      <label for="catName">Nombre</label>
+      <input type="text" id="catName" placeholder="Ej: Bebidas" />
+
+      <div class="modal-actions">
+        <button id="btnSave" class="btn-primary">Guardar</button>
+        <button id="btnCancel" class="btn-secondary">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar reutilizable -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2 id="sidebarUser">Super Food</h2>
+      <button id="close-sidebar" class="close-btn" aria-label="Cerrar menú">×</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="../adminHome/adminHome.html">🏠 Inicio</a>
+      <a href="../categories/categories.html" class="active">🍕 Categorías</a>
+      <a href="../products/products.html">🥗 Productos</a>
+      <a href="../orders/orders.html">📦 Órdenes</a>
+      <button id="logoutSidebarBtn" class="logout-btn">Salir</button>
+    </nav>
+  </aside>
+
+  <!-- Enrutador global -->
+  <script type="module" src="/src/main.ts"></script>
+  <!-- Lógica de esta página -->
+ <script type="module" src="/src/pages/admin/categories/categories.ts"></script>
+
+</body>
+</html>

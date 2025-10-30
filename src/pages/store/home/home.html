@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Food Store - Inicio</title>
+  <link rel="stylesheet" href="../../../style.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="header">
+    <h2>Food Store🍕</h2>
+    <nav class="nav">
+      <a href="../home/home.html">Inicio</a>
+      <a href="../cart/cart.html">Carrito</a>
+      <a href="../../client/orders/orders.html">Mis Pedidos</a>
+      <a href="../../admin/adminHome/adminHome.html" id="adminPanelBtn" style="display:none;">Panel Admin</a>
+      <button id="logoutBtn" class="btn-logout">Salir</button>
+    </nav>
+  </header>
+
+  <!-- Contenido -->
+  <div class="container">
+    <h2>Menú Disponible</h2>
+    <div id="productGrid" class="grid"></div>
+  </div>
+
+  <script type="module" src="./home.ts"></script>
+</body>
+</html>

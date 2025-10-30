@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Administrar Productos</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body id="admin-page">
+
+  <header class="header">
+    <h2>Productos 🍕</h2>
+    <nav class="nav">
+      <a href="../adminHome/adminHome.html">Inicio Admin</a>
+      <button id="logoutBtn" class="btn-logout">Salir</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h3>Listado de Productos</h3>
+    <button id="btnNuevoProducto" class="BtnIngresar">Nuevo Producto</button>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Imagen</th>
+          <th>Categoría</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaProductos"></tbody>
+    </table>
+
+    <!-- Modal -->
+    <div id="modalProducto" class="modal" style="display:none;">
+      <h3 id="modalTituloProducto">Nuevo Producto</h3>
+
+      <form id="formProducto">
+        <label>Nombre:</label>
+        <input id="pNombre" type="text" required />
+
+        <label>Precio:</label>
+        <input id="pPrecio" type="number" required />
+
+        <label>Imagen (URL):</label>
+        <input id="pImagen" type="url" />
+
+        <label>Categoría:</label>
+        <select id="pCategoria"></select>
+
+        <button type="submit" class="BtnIngresar">Guardar</button>
+        <button type="button" id="btnCancelarProducto" class="btn-logout">Cancelar</button>
+      </form>
+    </div>
+  </main>
+
+  <script type="module" src="./products.ts"></script>
+</body>
+</html>
