@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    // 🔽 Agregado para soportar rutas absolutas
+    "baseUrl": ".",
+    "paths": {
+      "/src/*": ["src/*"]
+    }
+  },
+  "include": ["src", "vite.config.ts"]
+}

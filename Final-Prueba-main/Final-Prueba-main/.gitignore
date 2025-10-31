@@ -1,0 +1,12 @@
+# Dependencias del Frontend (Vite/Node)
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# Archivos de compilación del Backend (Java/Maven)
+backend/target/
+
+# Archivos del IDE (IntelliJ/VSCode)
+.idea/
+.vscode/
+*.iml
