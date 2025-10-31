@@ -6,28 +6,31 @@
   <link rel="stylesheet" href="/src/styles.css" />
   <link rel="stylesheet" href="/src/pages/admin/categories/categories.css" />
 </head>
-<body id="admin-page">
+<body id="admin-page" class="categories-page">
 
-  <!-- Navbar simple + botón menú -->
+  <!--  Navbar fija -->
   <header class="admin-navbar">
     <h1 class="brand">
-      <img src="/src/assets/images/food-delivery.png" alt="Super Food Logo" class="logo">
+      <img src="/src/assets/images/food-delivery.png" alt="Super Food Logo" class="brand-icon">
       Super Food — Categorías
     </h1>
     <div id="menu-btn" class="menu-btn" aria-label="Abrir menú">☰</div>
   </header>
 
-  <main class="admin-container categories-container">
-    <div class="header-actions">
-      <h2 class="panel-title">Categorías disponibles</h2>
-      <button id="btnAdd" class="btn-primary">+ Nueva Categoría</button>
-    </div>
+  <!--  Contenido principal -->
+  <main class="admin-container admin-content">
+    <section class="admin-panel">
+      <div class="header-actions">
+        <h2 class="panel-title">Categorías disponibles</h2>
+        <button id="btnAdd" class="btn-primary">+ Nueva Categoría</button>
+      </div>
 
-    <!-- Lista -->
-    <div id="categoriesList" class="cat-list"></div>
+      <!-- Lista -->
+      <div id="categoriesList" class="cat-list"></div>
+    </section>
   </main>
 
-  <!-- Modal -->
+  <!--  Modal de creación/edición -->
   <div id="modal-bg" class="modal-bg" style="display:none;">
     <div class="modal">
       <h3 id="modal-title">Nueva Categoría</h3>
@@ -42,10 +45,10 @@
     </div>
   </div>
 
-  <!-- Sidebar reutilizable -->
+  <!--  Sidebar unificada -->
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-header">
-      <h2 id="sidebarUser">Super Food</h2>
+      <h2 id="sidebarUser">👤 Admin</h2>
       <button id="close-sidebar" class="close-btn" aria-label="Cerrar menú">×</button>
     </div>
 
@@ -54,13 +57,13 @@
       <a href="/src/pages/admin/categories/categories.html" class="active">🍕 Categorías</a>
       <a href="/src/pages/admin/products/products.html">🥗 Productos</a>
       <a href="/src/pages/admin/orders/orders.html">📦 Órdenes</a>
-      <button id="logoutSidebarBtn" class="logout-btn">Salir</button>
     </nav>
+
+    <button id="logoutSidebarBtn" class="logout-btn">Salir</button>
   </aside>
 
-  <!-- Enrutador global -->
+  <!-- Scripts -->
   <script type="module" src="/src/main.ts"></script>
-  <!-- Lógica de esta página -->
   <script type="module" src="/src/pages/admin/categories/categories.ts"></script>
 
 </body>

@@ -17,7 +17,7 @@ form.addEventListener("submit", async (event) => {
 
       const rol = user.role?.toLowerCase();
 
-      // ✅ Redirección con rutas absolutas
+     
       if (rol?.includes("admin")) {
         window.location.href = "/src/pages/admin/adminHome/adminHome.html";
       } else {

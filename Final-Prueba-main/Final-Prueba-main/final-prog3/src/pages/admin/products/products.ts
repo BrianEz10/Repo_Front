@@ -105,14 +105,32 @@ function render() {
 
 // ---- Modal ----
 function openModal(id: number | null) {
-  loadCategories(); // 🔥 Siempre actualizamos las categorías disponibles
+  loadCategories(); // Siempre actualizamos las categorías disponibles
   editingId = id;
   modalTitle.textContent = id ? "Editar Producto" : "Nuevo Producto";
   const prod = id ? productos.find((x) => x.id === id) : null;
 
   inputName.value = prod?.nombre ?? "";
   inputPrice.value = prod?.precio?.toString() ?? "";
-  selectCat.value = prod?.categoria ?? "";
+
+  // ✅ FIX: asegura que se seleccione la categoría correcta (case-insensitive)
+  if (prod?.categoria) {
+    const wanted = prod.categoria.trim().toLowerCase();
+    let matched = false;
+
+    Array.from(selectCat.options).forEach((opt) => {
+      if (opt.value.trim().toLowerCase() === wanted) {
+        selectCat.value = opt.value;
+        matched = true;
+      }
+    });
+
+    if (!matched) {
+      selectCat.selectedIndex = 0; 
+    }
+  } else {
+    selectCat.selectedIndex = 0;
+  }
 
   modalBG.style.display = "flex";
 }

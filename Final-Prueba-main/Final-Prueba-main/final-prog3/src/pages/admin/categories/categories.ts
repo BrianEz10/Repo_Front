@@ -7,7 +7,6 @@ if (!user || !isAdmin()) {
   window.location.href = "/src/pages/auth/login/login.html";
 }
 
-// Mostrar usuario en el encabezado del sidebar
 const sidebarUser = document.getElementById("sidebarUser");
 if (sidebarUser && user) {
   (sidebarUser as HTMLElement).textContent = `👤 ${user.name ?? "Admin"}`;
@@ -74,7 +73,7 @@ function render() {
     btnEdit.title = "Editar";
     btnEdit.innerText = "✎";
     btnEdit.addEventListener("click", (e) => {
-      e.stopPropagation(); // no navegar a productos
+      e.stopPropagation(); 
       openModal(c.id);
     });
 
