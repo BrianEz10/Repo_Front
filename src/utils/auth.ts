@@ -49,7 +49,6 @@ export function requireLogin() {
   }
 }
 
-
 export function isAdmin() {
   const user = getUser();
   return user && user.role === "admin";
