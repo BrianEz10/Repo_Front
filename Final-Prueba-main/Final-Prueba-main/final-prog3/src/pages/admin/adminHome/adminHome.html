@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel Admin - Super Food</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body id="admin-page" class="admin-home-page">
+  
+  <!-- Navbar fija -->
+  <header class="admin-navbar">
+    <h1 class="brand">
+      <img src="/src/assets/images/food-delivery.png" alt="Super Food Logo" class="brand-icon">
+      Super Food — Administración
+    </h1>
+    <div id="menu-btn" class="menu-btn" aria-label="Abrir menú">☰</div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="admin-container admin-content">
+    <section class="admin-panel">
+      <h3 class="admin-title">Bienvenido, <span id="adminName">Admin</span></h3>
+      <p class="admin-subtitle">Gestioná el contenido de la tienda desde aquí.</p>
+
+      <div class="admin-cards">
+        <a class="admin-card" href="/src/pages/admin/categories/categories.html">
+          <div class="admin-card__icon">🗂</div>
+          <div class="admin-card__title">Categorías</div>
+          <div class="admin-card__desc">Crear, editar y borrar categorías</div>
+        </a>
+
+        <a class="admin-card" href="/src/pages/admin/products/products.html">
+          <div class="admin-card__icon">🍕</div>
+          <div class="admin-card__title">Productos</div>
+          <div class="admin-card__desc">Gestionar catálogo y precios</div>
+        </a>
+
+        <a class="admin-card" href="/src/pages/admin/orders/orders.html">
+          <div class="admin-card__icon">📦</div>
+          <div class="admin-card__title">Órdenes</div>
+          <div class="admin-card__desc">Ver y administrar pedidos</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sidebar unificada -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2 id="sidebarUser">👤 Admin</h2>
+      <button id="close-sidebar" class="close-btn" aria-label="Cerrar menú">×</button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="/src/pages/admin/adminHome/adminHome.html" class="active">🏠 Inicio</a>
+      <a href="/src/pages/admin/categories/categories.html">🍕 Categorías</a>
+      <a href="/src/pages/admin/products/products.html">🥗 Productos</a>
+      <a href="/src/pages/admin/orders/orders.html">📦 Órdenes</a>
+    </nav>
+
+    <button id="logoutSidebarBtn" class="logout-btn">Salir</button>
+  </aside>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="/src/pages/admin/adminHome/adminHome.ts"></script>
+</body>
+</html>

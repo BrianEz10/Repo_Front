@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Categorías - Super Food</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+  <link rel="stylesheet" href="/src/pages/admin/categories/categories.css" />
+</head>
+<body id="admin-page" class="categories-page">
+
+  <!--  Navbar fija -->
+  <header class="admin-navbar">
+    <h1 class="brand">
+      <img src="/src/assets/images/food-delivery.png" alt="Super Food Logo" class="brand-icon">
+      Super Food — Categorías
+    </h1>
+    <div id="menu-btn" class="menu-btn" aria-label="Abrir menú">☰</div>
+  </header>
+
+  <!--  Contenido principal -->
+  <main class="admin-container admin-content">
+    <section class="admin-panel">
+      <div class="header-actions">
+        <h2 class="panel-title">Categorías disponibles</h2>
+        <button id="btnAdd" class="btn-primary">+ Nueva Categoría</button>
+      </div>
+
+      <!-- Lista -->
+      <div id="categoriesList" class="cat-list"></div>
+    </section>
+  </main>
+
+  <!--  Modal de creación/edición -->
+  <div id="modal-bg" class="modal-bg" style="display:none;">
+    <div class="modal">
+      <h3 id="modal-title">Nueva Categoría</h3>
+
+      <label for="catName">Nombre</label>
+      <input type="text" id="catName" placeholder="Ej: Bebidas" />
+
+      <div class="modal-actions">
+        <button id="btnSave" class="btn-primary">Guardar</button>
+        <button id="btnCancel" class="btn-secondary">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!--  Sidebar unificada -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2 id="sidebarUser">👤 Admin</h2>
+      <button id="close-sidebar" class="close-btn" aria-label="Cerrar menú">×</button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="/src/pages/admin/adminHome/adminHome.html">🏠 Inicio</a>
+      <a href="/src/pages/admin/categories/categories.html" class="active">🍕 Categorías</a>
+      <a href="/src/pages/admin/products/products.html">🥗 Productos</a>
+      <a href="/src/pages/admin/orders/orders.html">📦 Órdenes</a>
+    </nav>
+
+    <button id="logoutSidebarBtn" class="logout-btn">Salir</button>
+  </aside>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="/src/pages/admin/categories/categories.ts"></script>
+
+</body>
+</html>

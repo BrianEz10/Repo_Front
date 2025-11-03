@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registrarse</title>
+  <link rel="stylesheet" href="../../../styles.css" />
+</head>
+<body id="register-page" class="auth-page">
+  <main class="auth-container register-container">
+    <h1>Super Food</h1>
+    <h2>Crear cuenta</h2>
+
+    <form id="registerForm">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" placeholder="Ej: Juan Jauven" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Ej: juan@food.com" required />
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" placeholder="Mínimo 6 caracteres" minlength="6" required />
+
+      <label for="confirmPassword">Confirmar contraseña:</label>
+      <input type="password" id="confirmPassword" placeholder="Repetí tu contraseña" required />
+
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <p>¿Ya tenés cuenta?
+      <a href="../login/login.html">Iniciar sesión</a>
+    </p>
+  </main>
+
+  <script type="module" src="/src/pages/auth/register/register.ts"></script>
+</body>
+</html>
